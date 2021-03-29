@@ -1,2 +1,2 @@
 # Ucalgary Printer Payment System
-Java &amp; JDBC Design Project
+Java &amp; DBMS &amp; Verification Algo &amp;
