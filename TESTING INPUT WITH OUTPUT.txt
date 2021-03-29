@@ -1,0 +1,314 @@
+Testing started at 4:39 PM ...
+> Task :wrapper
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+> Task :Simple_Banking_System-task:cleanTest
+> Task :Simple_Banking_System-task:compileKotlin UP-TO-DATE
+> Task :Simple_Banking_System-task:compileJava UP-TO-DATE
+> Task :Simple_Banking_System-task:processResources NO-SOURCE
+> Task :Simple_Banking_System-task:classes UP-TO-DATE
+> Task :Simple_Banking_System-task:compileTestKotlin UP-TO-DATE
+> Task :Simple_Banking_System-task:compileTestJava UP-TO-DATE
+> Task :Simple_Banking_System-task:processTestResources NO-SOURCE
+> Task :Simple_Banking_System-task:testClasses UP-TO-DATE
+> Task :Simple_Banking_System-task:test
+
+Start test 1
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 2
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 3
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 4
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 5
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+1398
+
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000028
+Your card PIN:
+2350
+
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000036
+Your card PIN:
+1910
+
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000044
+Your card PIN:
+9609
+
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 6
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+6788
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 4000000000000010
+Enter your card PIN:
+> 6788
+You have successfully logged in!
+
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 0
+
+Bye!
+
+Start test 7
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+1075
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 4000000000000010
+Enter your card PIN:
+> 3232
+Wrong card number or PIN!
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 8
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+7569
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 400000821023345
+Enter your card PIN:
+> 7569
+Wrong card number or PIN!
+1. Create account
+2. Log into account
+0. Exit
+> 0
+
+Bye!
+
+Start test 9
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+8679
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 4000000000000010
+Enter your card PIN:
+> 8679
+You have successfully logged in!
+
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 1
+Balance: 0
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 0
+
+Bye!
+
+Start test 10
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+8144
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 4000000000000010
+Enter your card PIN:
+> 8144
+You have successfully logged in!
+
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 2
+Enter income
+> 10000
+Income was added!
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+Account balance is wrong after adding income.
+Expected 10000
+> 2
+Enter income
+> 15000
+Income was added!
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+Account balance is wrong after adding income.
+Expected 25000
+> 0
+
+Bye!
+
+Start test 11
+1. Create account
+2. Log into account
+0. Exit
+> 1
+Your card have been created
+Your card number:
+4000000000000010
+Your card PIN:
+2862
+
+1. Create account
+2. Log into account
+0. Exit
+> 2
+Enter your card number:
+> 4000000000000010
+Enter your card PIN:
+> 2862
+You have successfully logged in!
+
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 4
+The account has been closed!
+1. Balance
+2. Add income
+3. Do transfer
+4. Close account
+5. Log out
+0. Exit
+> 0
+
+Bye!
+BUILD SUCCESSFUL in 3s
+6 actionable tasks: 2 executed, 4 up-to-date
