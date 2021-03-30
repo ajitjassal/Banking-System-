@@ -1,2 +1,2 @@
 # Ucalgary Printer Payment System
-Java &amp; DBMS &amp; Verification Algo &amp;
+Backend : Java ; DBMS; Verification Algo; OOPs
