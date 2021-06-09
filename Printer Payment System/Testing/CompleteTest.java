@@ -46,30 +46,35 @@ public class SimpleBankSystemTest extends StageTest<String> {
         return List.of(
 
                 //Проверка существования файла БД
+                // Check for the existence of the database file
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("0")
                         .setCheckFunc(SimpleBankSystemTest::checkDatabaseFile),
 
                 //Проверка соединения
+                //Checking the connection
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("0")
                         .setCheckFunc(SimpleBankSystemTest::checkConnection),
 
                 //Проверка существования таблицы card
+                //// Check if the card table exists
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("0")
                         .setCheckFunc(SimpleBankSystemTest::checkIfTableExists),
 
                 //Проверка столбцов таблицы card
+                //// Check the columns of the card table
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("0")
                         .setCheckFunc(SimpleBankSystemTest::checkColumns),
 
                 //Проверка добавлений записей в таблицу.
+                //Checking the addition of records to the table.
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -104,6 +109,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                         .setCheckFunc(SimpleBankSystemTest::checkData),
 
                 //Проверка авторизации
+                //Authorization check
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -143,6 +149,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                             return "0";
                         }),
                 //Проверка авторизации с неправильным пинкодом
+                /// Authorization check with wrong pincode
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -184,6 +191,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                             return "0";
                         }),
                 //Проверка авторизации для несуществующего акканута
+                //Authorization check for a non-existent account
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -225,6 +233,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                             return "0";
                         }),
                 //Проверка баланса
+                //Balance check
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -257,6 +266,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                             return "0";
                         }),
                 //Проверка Add Income
+                //Check Add Income
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -296,6 +306,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
                             return "0";
                         }),
                 //Проверка transfer
+                //Check transfer
                 new TestCase<String>()
                         .addArguments("-fileName", databaseFileName)
                         .setInput("1")
@@ -413,6 +424,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
         int correctCardNumberBalance = getBalance(correctCardNumber); //logged in
 
         //Необходимо изменить сообщения об ошибке
+        // Need to change error messages
         if (toTransferCardBalance != correctBalanceForBothAccounts) {
             return new CheckResult(false, "Incorrect account balance of the card to which the transfer was made.");
         }
@@ -609,6 +621,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
         Path tempDbFile = Paths.get(tempDatabaseFileName);
 
         //Если при запуске теста, файл БД не был создан, то это значит, что временного файла нет. Пропускаем.
+        // If, when starting the test, the database file was not created, then this means that there is no temporary file. Let's skip.
         if (!tempDbFile.toFile().exists())
             return;
 
@@ -618,6 +631,7 @@ public class SimpleBankSystemTest extends StageTest<String> {
     }
 
     //Что-то типа синглтона
+    //// Something like a singleton
     private static Connection getConnection() {
         if (connection == null) {
             try {
@@ -637,7 +651,9 @@ public class SimpleBankSystemTest extends StageTest<String> {
     }
 
     //Получаем сгенерированные данные из консоли, чтобы в дальнейшем проверить на их содержание в БД
+    //We receive the generated data from the console in order to further check for their content in the database
     //Так же проверяем проходят ли номера карт проверку по алгоритму Луна.
+    //We also check if the card numbers pass the check by the Luhn algorithm.
     private boolean getData(String out) {
 
         Pattern cardNumberPattern = Pattern.compile("400000\\d{10}");
