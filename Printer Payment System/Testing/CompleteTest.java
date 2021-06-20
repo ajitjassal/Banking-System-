@@ -1,7 +1,4 @@
 import banking.Main;
-import org.hyperskill.hstest.stage.StageTest;
-import org.hyperskill.hstest.testcase.CheckResult;
-import org.hyperskill.hstest.testcase.TestCase;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
